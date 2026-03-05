@@ -1,7 +1,17 @@
 import { useNavigate, useLocation } from "react-router";
 import { Star, RotateCcw } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { TreeIcon } from "./TreeIcon";
+
+function getEarthImage(wrong: number): string {
+    switch (wrong) {
+        case 0: return "/img/1.png";
+        case 1: return "/img/2.png";
+        case 2: return "/img/3.png";
+        case 3: return "/img/4.png";
+        case 4: return "/img/5.png";
+        default: return "/img/6.png";
+    }
+}
 
 export function FinishScreen() {
     const navigate = useNavigate();
@@ -20,7 +30,7 @@ export function FinishScreen() {
     if (scorePercentage >= 0.99) stars = 3;
 
     return (
-        <div className="h-[100dvh] w-full bg-gradient-to-b from-gray-50 to-white flex flex-col items-center justify-center p-4 sm:p-6 overflow-hidden">
+        <div className="min-h-[100dvh] w-full bg-gradient-to-b from-gray-50 to-white flex flex-col items-center justify-center p-4 sm:p-6">
             <div className="max-w-md w-full h-full flex flex-col items-center justify-center gap-4 sm:gap-6 z-10 py-2 min-h-0">
 
                 {/* Title */}
@@ -29,23 +39,12 @@ export function FinishScreen() {
                 </h1>
 
                 {/* Globe Visualization */}
-                <div className="relative w-40 h-40 sm:w-56 sm:h-56 flex-shrink-0">
-                    {/* Status Glow */}
-                    <div className={`absolute inset-0 rounded-full blur-3xl opacity-50 ${stars === 3 ? "bg-gradient-to-br from-emerald-400 to-sky-400" : stars === 2 ? "bg-gradient-to-br from-yellow-400 to-emerald-400" : "bg-gradient-to-br from-red-500 to-orange-400"}`}></div>
-
-                    {/* Actually dynamically tint the image depending on score to represent earth state */}
-                    <div className={`relative w-full h-full rounded-full shadow-2xl overflow-hidden border-4 ${stars === 3 ? "border-emerald-300" : stars === 2 ? "border-yellow-300" : "border-red-400"} `}>
-                        <ImageWithFallback
-                            src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlYXJ0aHxlbnwwfHx8fDE2OTk5OTk5OTl8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                            alt="Earth status"
-                            className={`w-full h-full object-cover mix-blend-overlay ${stars === 3 ? "opacity-90" : stars === 2 ? "opacity-60 grayscale-[50%]" : "opacity-40 grayscale sepia"}`}
-                        />
-
-                        {/* Damage overlay for low scores */}
-                        {stars < 2 && (
-                            <div className="absolute inset-0 bg-gradient-to-br from-red-800 via-orange-700 to-amber-900 opacity-60 mix-blend-multiply"></div>
-                        )}
-                    </div>
+                <div className="flex-shrink-0">
+                    <img
+                        src={getEarthImage(wrongAnswers)}
+                        alt="Earth final state"
+                        className="w-40 h-40 sm:w-56 sm:h-56 object-contain drop-shadow-lg"
+                    />
                 </div>
 
                 {/* Star Rating Section */}
