@@ -1,9 +1,23 @@
 import { useNavigate } from "react-router";
 import { Leaf, Cpu, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import questionsData from "../questions.json";
 
 export function StartScreen() {
   const navigate = useNavigate();
+
+  const handleStartGame = () => {
+    navigate("/game", {
+      state: {
+        questions: questionsData,
+        currentQuestionIdx: 0,
+        correctAnswers: 0,
+        wrongAnswers: 0,
+        totalQuestions: questionsData.length,
+        answerHistory: []
+      }
+    });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center p-6">
@@ -14,7 +28,7 @@ export function StartScreen() {
             Information about the game - what to do?
           </h1>
           <p className="text-gray-600 leading-relaxed">
-            Discover the environmental impact of AI and technology through an interactive quiz. 
+            Discover the environmental impact of AI and technology through an interactive quiz.
             Answer questions, learn fascinating facts, and watch your progress grow with each correct answer.
             Your choices help us understand the hidden costs of our digital world.
           </p>
@@ -25,14 +39,14 @@ export function StartScreen() {
           {/* Background Decorative Elements */}
           <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-sky-200 to-purple-200 rounded-full blur-3xl opacity-30"></div>
           <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-br from-emerald-200 to-green-200 rounded-full blur-3xl opacity-30"></div>
-          
+
           <div className="absolute top-6 right-6 opacity-10">
             <Cpu className="w-24 h-24 text-sky-600" />
           </div>
           <div className="absolute bottom-6 left-6 opacity-10">
             <Leaf className="w-24 h-24 text-emerald-600" />
           </div>
-          
+
           {/* Central Content */}
           <div className="relative text-center space-y-6">
             {/* 3D Globe Illustration */}
@@ -40,7 +54,7 @@ export function StartScreen() {
               <div className="relative w-48 h-48 mx-auto">
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-sky-400 rounded-full blur-2xl opacity-40"></div>
-                
+
                 {/* Main globe */}
                 <div className="relative w-full h-full rounded-full bg-gradient-to-br from-emerald-400 via-green-500 to-sky-500 shadow-2xl overflow-hidden">
                   <ImageWithFallback
@@ -48,13 +62,13 @@ export function StartScreen() {
                     alt="Healthy Earth"
                     className="w-full h-full object-cover opacity-80 mix-blend-overlay"
                   />
-                  
+
                   {/* Continents overlay effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-green-600 via-transparent to-blue-600 opacity-60"></div>
-                  
+
                   {/* Highlight effect */}
                   <div className="absolute top-4 left-8 w-16 h-16 bg-white rounded-full blur-xl opacity-40"></div>
-                  
+
                   {/* Tech icons overlay */}
                   <div className="absolute top-1/4 right-6">
                     <Sparkles className="w-6 h-6 text-yellow-300 opacity-80" />
@@ -65,11 +79,11 @@ export function StartScreen() {
                 </div>
               </div>
             </div>
-            
+
             <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-green-600 to-sky-600 drop-shadow-sm">
               World healthy here!
             </h2>
-            
+
             <p className="text-gray-700 text-lg max-w-md mx-auto font-medium">
               Where technology meets sustainability
             </p>
@@ -78,7 +92,7 @@ export function StartScreen() {
 
         {/* CTA Button */}
         <button
-          onClick={() => navigate("/game")}
+          onClick={handleStartGame}
           className="w-full bg-gradient-to-r from-emerald-500 to-sky-500 hover:from-emerald-600 hover:to-sky-600 text-white text-lg font-semibold py-5 px-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02]"
         >
           Start the game!

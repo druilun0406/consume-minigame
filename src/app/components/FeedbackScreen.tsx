@@ -49,8 +49,8 @@ export function FeedbackScreen() {
           "text-sm sm:text-base";
 
   return (
-    <div className="min-h-[100dvh] w-full bg-gradient-to-b from-gray-50 to-white">
-      <div className="h-full max-w-2xl mx-auto flex flex-col justify-between p-3 sm:p-5 gap-4 sm:gap-6">
+    <div className="h-[100dvh] w-full bg-gradient-to-b from-gray-50 to-white flex flex-col items-center justify-center p-4 sm:p-6 overflow-hidden">
+      <div className="h-full max-w-2xl mx-auto flex flex-col justify-between p-3 sm:p-5 gap-4 sm:gap-6 text-center">
 
         {/* ── Earth Globe ── */}
         <div className="flex justify-center flex-shrink-0">
@@ -63,7 +63,7 @@ export function FeedbackScreen() {
 
         {/* ── Result badge ── */}
         <div className={`rounded-xl sm:rounded-2xl px-4 py-3 sm:py-4 text-center border-2 flex-shrink-0 flex items-center justify-center gap-3
-          ${isCorrect
+            ${isCorrect
             ? "bg-gradient-to-br from-emerald-50 to-emerald-100 border-emerald-300"
             : "bg-gradient-to-br from-red-50 to-red-100 border-red-300"
           }`}
@@ -108,7 +108,7 @@ export function FeedbackScreen() {
           <button
             onClick={handleNext}
             className={`w-full font-semibold py-3 sm:py-4 px-6 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] text-white text-sm sm:text-base
-              ${isCorrect
+                ${isCorrect
                 ? "bg-gradient-to-r from-emerald-500 to-sky-500 hover:from-emerald-600 hover:to-sky-600"
                 : "bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600"
               }`}

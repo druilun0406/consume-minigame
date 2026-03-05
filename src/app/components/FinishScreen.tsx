@@ -1,6 +1,8 @@
 import { useNavigate, useLocation } from "react-router";
 import { Star, RotateCcw } from "lucide-react";
-import { TreeIcon } from "./TreeIcon";
+
+const IMG_RIGHT = "/src/app/img/easyAI_right.png";
+const IMG_WRONG = "/src/app/img/easyAI_wrong.png";
 
 function getEarthImage(wrong: number): string {
     switch (wrong) {
@@ -30,7 +32,7 @@ export function FinishScreen() {
     if (scorePercentage >= 0.99) stars = 3;
 
     return (
-        <div className="min-h-[100dvh] w-full bg-gradient-to-b from-gray-50 to-white flex flex-col items-center justify-center p-4 sm:p-6">
+        <div className="h-[100dvh] w-full bg-gradient-to-b from-gray-50 to-white flex flex-col items-center justify-center p-4 sm:p-6 overflow-hidden">
             <div className="max-w-md w-full h-full flex flex-col items-center justify-center gap-4 sm:gap-6 z-10 py-2 min-h-0">
 
                 {/* Title */}
@@ -69,7 +71,7 @@ export function FinishScreen() {
                 <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-md border border-gray-100 w-full flex items-center justify-around flex-shrink-0">
                     <div className="flex flex-col items-center">
                         <div className="flex items-center gap-2 bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-200">
-                            <TreeIcon state="correct" className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0" />
+                            <img src={IMG_RIGHT} alt="Correct" className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0 object-contain" />
                             <span className="text-xl sm:text-2xl font-bold text-emerald-700">{correctAnswers}</span>
                         </div>
                         <span className="text-sm font-medium text-emerald-800 mt-2">Correct</span>
@@ -79,7 +81,7 @@ export function FinishScreen() {
 
                     <div className="flex flex-col items-center">
                         <div className="flex items-center gap-2 bg-amber-50 px-4 py-2 rounded-xl border border-amber-200">
-                            <TreeIcon state="wrong" className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0" />
+                            <img src={IMG_WRONG} alt="Wrong" className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0 object-contain" />
                             <span className="text-xl sm:text-2xl font-bold text-amber-800">{wrongAnswers}</span>
                         </div>
                         <span className="text-sm font-medium text-amber-900 mt-2">Incorrect</span>
