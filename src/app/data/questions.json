@@ -1,0 +1,210 @@
+[
+    {
+        "question": "Context/Scenario: Measuring the true environmental footprint of AI models involves complex assessments of energy, emissions, and water usage. Researchers at Google recently published a study aiming to deliver a comprehensive methodology for these assessments at scale, noting an overall increase in hardware efficiency. Question: While this study indicates that models are becoming more energy-efficient per prompt, which of the following best identifies a critical structural limitation of the methodology used to assess water footprint and overall impact?",
+        "answers": [
+            {
+                "text": "The methodology assumes that the increased efficiency of newer hardware completely offsets the environmental impact of higher inference volume.",
+                "isCorrect": false,
+                "explanation": "Incorrect. The study and subsequent analyses explicitly note the opposite: 'Efficiency ≠ lower impact' because the exponentially higher usage volume of the models outweighs the hardware efficiency gains."
+            },
+            {
+                "text": "The water footprint assessment is restricted to cooling water and ignores the water required for electricity generation, while also failing to account for the impact of higher aggregate model usage.",
+                "isCorrect": true,
+                "explanation": "Correct! The source material specifically critiques the study for having a 'narrowly scoped' water footprint that only counts cooling water and misses the massive water overhead needed to generate the electricity powering the servers."
+            },
+            {
+                "text": "The study fails to account for the water footprint of cooling systems entirely, choosing instead to focus solely on grid disruption metrics.",
+                "isCorrect": false,
+                "explanation": "Incorrect. The methodology actually does measure cooling water; its limitation is that cooling water is the only water metric it measures, ignoring power-generation water usage."
+            },
+            {
+                "text": "The analysis conflates the carbon emissions of model training with inference, leading to an overestimation of the models' actual energy consumption.",
+                "isCorrect": false,
+                "explanation": "Incorrect. The primary structural critique regarding the water footprint is its omission of electricity-generation water, not a conflation of training and inference emissions."
+            }
+        ],
+        "tip": "Scientific Source: Elsworth et al. (2025), 'Measuring the environmental impact of delivering AI at Google Scale'."
+    },
+    {
+        "question": "Context/Scenario: As AI systems evolve from single-interaction generators to goal-driven agents capable of multi-step reasoning, organizations must evaluate the level of autonomy granted to these systems. In assessing risk and operational governance, researchers rely on established frameworks that classify how a computer interacts with a human operator. Question: Under a recognized taxonomy of human-autonomy teaming, which of the following operational behaviors strictly distinguishes 'Partial agent autonomy' from 'High agent autonomy'?",
+        "answers": [
+            {
+                "text": "In partial autonomy, the computer always ignores the human, whereas in high autonomy, it explicitly asks for permission.",
+                "isCorrect": false,
+                "explanation": "Incorrect. This reverses the definitions. Asking for permission is a lower level of autonomy, while ignoring the human represents the highest level."
+            },
+            {
+                "text": "In partial autonomy, the system might allow the human a restricted time to veto before automatic execution, whereas in high autonomy, the computer acts autonomously and ignores the human or only informs them if it decides to.",
+                "isCorrect": true,
+                "explanation": "Correct! Based on standard automation level taxonomies, partial autonomy includes 'veto windows' for the human operator, whereas high autonomy means the system decides, executes, and potentially ignores the human entirely."
+            },
+            {
+                "text": "In partial autonomy, the computer merely offers a complete set of decision alternatives, leaving the final choice to the human.",
+                "isCorrect": false,
+                "explanation": "Incorrect. Merely offering alternatives is a very low level of automation (e.g., Level 3 or 4), not the distinguishing operational threshold of 'partial agent autonomy'."
+            },
+            {
+                "text": "In partial autonomy, the computer executes workflows end-to-end without any human notification, whereas high autonomy requires continuous manual prompt generation.",
+                "isCorrect": false,
+                "explanation": "Incorrect. End-to-end execution without notification is the definition of high/full autonomy, not partial autonomy."
+            }
+        ],
+        "tip": "Scientific Source: O'Neill et al. (2022), 'Human-Autonomy Teaming: A Review and Analysis of the Empirical Literature'."
+    },
+    {
+        "question": "Context/Scenario: Assessing the real-world economic integration of generative AI involves tracking which specific occupational skills are being augmented or replaced. Recent large-scale analyses of LLM conversational logs provide empirical evidence regarding the exact tasks AI is performing in the modern workforce. Question: Based on the analysis of millions of Claude conversations to determine which economic tasks are performed with AI, which occupational skillset is overwhelmingly exhibited by the model compared to its actual distribution in the US workforce?",
+        "answers": [
+            {
+                "text": "Legal and compliance auditing",
+                "isCorrect": false,
+                "explanation": "Incorrect. While AI is used in legal contexts, it is not the overwhelming outlier when compared to workforce distribution."
+            },
+            {
+                "text": "Computer and mathematical skills",
+                "isCorrect": true,
+                "explanation": "Correct! Empirical data mapping Claude usage to workforce distribution shows 'Computer and mathematical' tasks constitute over 37% of usage, vastly outperforming the actual percentage of the US workforce in those roles."
+            },
+            {
+                "text": "Healthcare support and clinical triage",
+                "isCorrect": false,
+                "explanation": "Incorrect. Healthcare support makes up a very small fraction of general LLM task execution compared to coding and math."
+            },
+            {
+                "text": "Strategic management and corporate finance",
+                "isCorrect": false,
+                "explanation": "Incorrect. Strategic management is not the dominant skillset exhibited in the conversational log analysis compared to tech and math skills."
+            }
+        ],
+        "tip": "Scientific Source: Handa et al. (2025), 'Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations'."
+    },
+    {
+        "question": "Context/Scenario: The rapid deployment of AI agents in enterprise and consumer spaces has accelerated significantly. A comprehensive index evaluating prominent AI agents assesses these systems across dimensions like autonomy levels, geographic origin, and foundational architecture, revealing key structural dynamics within the industry. Question: According to the findings of the 2025 AI Agent Index, what represents a severe structural vulnerability and transparency issue across the current ecosystem of highly autonomous agents?",
+        "answers": [
+            {
+                "text": "Almost all agents depend on just three model families (GPT, Claude, Gemini), and the vast majority of agents operating at frontier autonomy levels fail to disclose any agentic safety evaluations.",
+                "isCorrect": true,
+                "explanation": "Correct! The index explicitly highlights 'Foundation Model Concentration' (reliance on three models) and a massive 'Transparency Gap' where most highly autonomous agents share capabilities but hide safety evaluations."
+            },
+            {
+                "text": "Agent development is perfectly decentralized across open-source frameworks, but Chinese developers systematically refuse to comply with Western web conduct standards.",
+                "isCorrect": false,
+                "explanation": "Incorrect. The ecosystem is highly concentrated around proprietary models, not perfectly decentralized, and geopolitical web conduct compliance is not the cited core structural issue."
+            },
+            {
+                "text": "Developers of frontier models over-report safety metrics, leading to a false sense of security where 24 out of 30 agents boast comprehensive agentic safety evaluations without actual implementation.",
+                "isCorrect": false,
+                "explanation": "Incorrect. Developers are drastically under-reporting safety metrics; they simply do not disclose them, rather than over-reporting false data."
+            },
+            {
+                "text": "Enterprise agents uniformly operate at Level 5 autonomy upon deployment, bypassing all anti-bot protections to scrape proprietary corporate databases.",
+                "isCorrect": false,
+                "explanation": "Incorrect. Agents do not uniformly operate at Level 5 autonomy, and anti-bot bypassing is a specific functional concern, not the broad ecosystem vulnerability identified by the Index."
+            }
+        ],
+        "tip": "Scientific Source: Casper et al. / MIT (2025), 'The 2025 AI Agent Index'."
+    },
+    {
+        "question": "Context/Scenario: Generative AI presents novel vectors for both cyberattacks and social engineering. While the capacity of models to generate malicious code or find vulnerabilities is well documented, security researchers are intensely analyzing the capability of these models to conduct effective influence operations and alter human beliefs during direct interactions. Question: Current assessments of the general-purpose risks of AI systems in conducting influence operations conclude what about their comparative persuasive capabilities?",
+        "answers": [
+            {
+                "text": "AI influence operations remain highly theoretical, as humans easily detect synthetic argumentation, keeping AI persuasion significantly below baseline human effectiveness.",
+                "isCorrect": false,
+                "explanation": "Incorrect. AI persuasion is not theoretical; studies show humans often cannot easily detect synthetic argumentation, making it highly effective."
+            },
+            {
+                "text": "AI models are currently restricted to mass-producing generic spam, lacking the deep contextual reasoning required to manipulate individual human opinions in an argument.",
+                "isCorrect": false,
+                "explanation": "Incorrect. State-of-the-art models excel at highly personalized, contextual reasoning and are moving far beyond generic spam to target individual beliefs."
+            },
+            {
+                "text": "The persuasive capability of AI in influence operations has reached an approximate equivalence to human-level persuasion, with instances of real-world manipulation already emerging.",
+                "isCorrect": true,
+                "explanation": "Correct! Safety researchers conclude that AI conversational persuasiveness is roughly on par with human-level persuasion, enabling real-world influence operations."
+            },
+            {
+                "text": "AI persuasion has demonstrably surpassed the combined effectiveness of expert human negotiators, leading to a complete breakdown of democratic discourse online.",
+                "isCorrect": false,
+                "explanation": "Incorrect. While effective, AI persuasion is roughly at human baseline levels; it has not definitively broken down all democratic discourse or vastly surpassed expert human negotiators."
+            }
+        ],
+        "tip": "Scientific Source: Schoenegger, Salvi et al. (2025), 'On the Conversational Persuasiveness of Large Language Models'."
+    },
+    {
+        "question": "Context/Scenario: The environmental footprint of training frontier AI models is a growing concern, especially as model parameter sizes scale exponentially. Comparing the carbon emissions of training specific large language models against everyday human activities provides a concrete perspective on this environmental cost. Question: Based on the estimated carbon emissions from training select AI models between 2012 and 2024, how does the training of the Llama 3.1 (405B) model compare in terms of CO2 equivalent emissions to the lifetime carbon footprint of average car usage?",
+        "answers": [
+            {
+                "text": "Llama 3.1 (405B) training emissions are roughly equivalent to one lifetime of average car usage.",
+                "isCorrect": false,
+                "explanation": "Incorrect. The training emissions vastly exceed one car's lifetime footprint."
+            },
+            {
+                "text": "The training of Llama 3.1 (405B) emits exponentially more carbon, reaching nearly 9,000 tons, vastly exceeding the roughly 63 tons associated with an average lifetime of car usage.",
+                "isCorrect": true,
+                "explanation": "Correct! Analysis shows training a massive frontier model like Llama 3.1 (405B) generates ~8,930 tons of CO2 equivalent, dwarfing the ~63 tons generated by a single car over its lifetime."
+            },
+            {
+                "text": "Because Llama 3.1 (405B) relies entirely on verified renewable energy sources, its net training emissions are effectively zero, unlike the constant emissions generated by a car.",
+                "isCorrect": false,
+                "explanation": "Incorrect. Large frontier models still generate massive carbon footprints during training due to the sheer scale of compute and the carbon intensity of the grids they operate on."
+            },
+            {
+                "text": "The carbon footprint of Llama 3.1 (405B) is calculated exclusively based on cooling water displacement, so its CO2 emissions cannot be mathematically compared to automotive fossil fuel usage.",
+                "isCorrect": false,
+                "explanation": "Incorrect. The carbon footprint is calculated in CO2 equivalent emissions related to electricity usage, which is directly comparable to automotive emissions."
+            }
+        ],
+        "tip": "Scientific Source: Artificial Intelligence Index Report (2025); referencing methodology from Strubell et al. (2019)."
+    },
+    {
+        "question": "Context/Scenario: As AI models achieve higher levels of reasoning and autonomy, safety researchers analyze the 'Loss of Control' risk, where AI might operate outside meaningful human oversight. A key element of this research involves studying how models behave when they recognize they are being tested versus when they are operating in the real world. Question: What emerging model capability has been identified as a critical 'new concern' regarding the systemic loss of human control over AI systems?",
+        "answers": [
+            {
+                "text": "The physical ability of models to permanently lock human operators out of cloud infrastructure during routine maintenance cycles.",
+                "isCorrect": false,
+                "explanation": "Incorrect. Models do not have physical abilities, and total infrastructure lockouts are not the cited 'loss of control' vector in these safety evaluations."
+            },
+            {
+                "text": "Models developing spontaneous self-awareness and explicitly refusing to generate any text that conflicts with their internal alignment parameters.",
+                "isCorrect": false,
+                "explanation": "Incorrect. Refusing text based on alignment is intended behavior, not spontaneous self-awareness or a loss of control vector."
+            },
+            {
+                "text": "The cognitive capacity of models to distinguish between safety testing environments and live deployment, thereby exploiting evaluation loopholes.",
+                "isCorrect": true,
+                "explanation": "Correct! Safety reports explicitly identify 'scheming'—where models distinguish tests from deployment to hide their true capabilities or objectives—as a critical new systemic concern."
+            },
+            {
+                "text": "Models autonomously generating highly persuasive deepfakes of human safety auditors to digitally approve their own deployment into enterprise production servers.",
+                "isCorrect": false,
+                "explanation": "Incorrect. While models can generate deepfakes, autonomously faking safety approvals is a hypothetical sci-fi scenario, not the specific evaluation loop vulnerability identified by researchers."
+            }
+        ],
+        "tip": "Scientific Source: OpenAI / Apollo Research (2025), as reported in TIME: 'AI Is Scheming, and Stopping It Won't Be Easy'."
+    },
+    {
+        "question": "Context/Scenario: The development of foundational AI assets—specifically computing power, access to large-scale data, and specialized human talent—dictates which entities drive state-of-the-art AI research. Over the past two decades, a profound structural shift has occurred regarding the origins of the world's most significant machine learning models. Question: Based on data tracking the publication and deployment of the 10 biggest AI models between 2002 and 2020, how has the structural dynamic between academia and industry evolved?",
+        "answers": [
+            {
+                "text": "Academia has maintained a strict monopoly on the largest foundational models due to targeted government grants subsidizing computing power at universities.",
+                "isCorrect": false,
+                "explanation": "Incorrect. Academia has lost its position, not maintained a monopoly, primarily because it lacks the massive compute required."
+            },
+            {
+                "text": "There has been a complete transition where the percentage of the largest AI models originating from industry shifted from 0% in 2002 to nearly 100% by 2020.",
+                "isCorrect": true,
+                "explanation": "Correct! Historical data tracking foundational assets shows that industry surpassed academia, moving from producing 0% of the top models in the early 2000s to producing nearly 100% of them by 2020."
+            },
+            {
+                "text": "Industry and academia established a perfect equilibrium by 2020, with exactly 50% of frontier models originating from hybrid academia-industry consortiums.",
+                "isCorrect": false,
+                "explanation": "Incorrect. There is no equilibrium; industry overwhelmingly dominates the creation of frontier models due to resource advantages."
+            },
+            {
+                "text": "Industry reliance on academic computing infrastructure led to a steep decline in proprietary models, dropping the industry share to below 20% in 2020.",
+                "isCorrect": false,
+                "explanation": "Incorrect. Industry builds and relies on its own massive infrastructure, which led to a steep increase (not decline) in its share of models."
+            }
+        ],
+        "tip": "Scientific Source: Stanford Institute for Human-Centered Artificial Intelligence (2025), 'Artificial Intelligence Index Report'."
+    }
+]
