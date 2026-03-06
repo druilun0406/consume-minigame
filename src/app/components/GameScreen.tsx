@@ -47,11 +47,14 @@ const LivesCounter = ({ wrongAnswers }: { wrongAnswers: number }) => {
           return (
             <div
               key={i}
-              className={`transition-all duration-500 transform ${!isFull ? "scale-75 opacity-30 grayscale" : "animate-bounce"}`}
+              className={`transition-all duration-500 transform ${!isFull ? "scale-75 opacity-20 grayscale" : "hover:scale-110"}`}
             >
-              <span className="text-xl sm:text-2xl drop-shadow-[0_0_5px_rgba(220,38,38,0.8)]">
-                {isFull ? "❤️" : "🤍"}
-              </span>
+              <img
+                src="/src/app/img/heart.png"
+                alt={isFull ? "Life" : "Lost"}
+                className="w-6 h-6 sm:w-7 sm:h-7 object-contain"
+                style={isFull ? { filter: 'drop-shadow(0 0 6px rgba(220,38,38,0.7))' } : {}}
+              />
             </div>
           );
         })}
