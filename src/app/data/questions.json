@@ -1,210 +1,1162 @@
 [
-    {
-        "question": "Context/Scenario: Measuring the true environmental footprint of AI models involves complex assessments of energy, emissions, and water usage. Researchers at Google recently published a study aiming to deliver a comprehensive methodology for these assessments at scale, noting an overall increase in hardware efficiency. Question: While this study indicates that models are becoming more energy-efficient per prompt, which of the following best identifies a critical structural limitation of the methodology used to assess water footprint and overall impact?",
-        "answers": [
-            {
-                "text": "The methodology assumes that the increased efficiency of newer hardware completely offsets the environmental impact of higher inference volume.",
-                "isCorrect": false,
-                "explanation": "Incorrect. The study and subsequent analyses explicitly note the opposite: 'Efficiency ≠ lower impact' because the exponentially higher usage volume of the models outweighs the hardware efficiency gains."
-            },
-            {
-                "text": "The water footprint assessment is restricted to cooling water and ignores the water required for electricity generation, while also failing to account for the impact of higher aggregate model usage.",
-                "isCorrect": true,
-                "explanation": "Correct! The source material specifically critiques the study for having a 'narrowly scoped' water footprint that only counts cooling water and misses the massive water overhead needed to generate the electricity powering the servers."
-            },
-            {
-                "text": "The study fails to account for the water footprint of cooling systems entirely, choosing instead to focus solely on grid disruption metrics.",
-                "isCorrect": false,
-                "explanation": "Incorrect. The methodology actually does measure cooling water; its limitation is that cooling water is the only water metric it measures, ignoring power-generation water usage."
-            },
-            {
-                "text": "The analysis conflates the carbon emissions of model training with inference, leading to an overestimation of the models' actual energy consumption.",
-                "isCorrect": false,
-                "explanation": "Incorrect. The primary structural critique regarding the water footprint is its omission of electricity-generation water, not a conflation of training and inference emissions."
-            }
-        ],
-        "tip": "Scientific Source: Elsworth et al. (2025), 'Measuring the environmental impact of delivering AI at Google Scale'."
-    },
-    {
-        "question": "Context/Scenario: As AI systems evolve from single-interaction generators to goal-driven agents capable of multi-step reasoning, organizations must evaluate the level of autonomy granted to these systems. In assessing risk and operational governance, researchers rely on established frameworks that classify how a computer interacts with a human operator. Question: Under a recognized taxonomy of human-autonomy teaming, which of the following operational behaviors strictly distinguishes 'Partial agent autonomy' from 'High agent autonomy'?",
-        "answers": [
-            {
-                "text": "In partial autonomy, the computer always ignores the human, whereas in high autonomy, it explicitly asks for permission.",
-                "isCorrect": false,
-                "explanation": "Incorrect. This reverses the definitions. Asking for permission is a lower level of autonomy, while ignoring the human represents the highest level."
-            },
-            {
-                "text": "In partial autonomy, the system might allow the human a restricted time to veto before automatic execution, whereas in high autonomy, the computer acts autonomously and ignores the human or only informs them if it decides to.",
-                "isCorrect": true,
-                "explanation": "Correct! Based on standard automation level taxonomies, partial autonomy includes 'veto windows' for the human operator, whereas high autonomy means the system decides, executes, and potentially ignores the human entirely."
-            },
-            {
-                "text": "In partial autonomy, the computer merely offers a complete set of decision alternatives, leaving the final choice to the human.",
-                "isCorrect": false,
-                "explanation": "Incorrect. Merely offering alternatives is a very low level of automation (e.g., Level 3 or 4), not the distinguishing operational threshold of 'partial agent autonomy'."
-            },
-            {
-                "text": "In partial autonomy, the computer executes workflows end-to-end without any human notification, whereas high autonomy requires continuous manual prompt generation.",
-                "isCorrect": false,
-                "explanation": "Incorrect. End-to-end execution without notification is the definition of high/full autonomy, not partial autonomy."
-            }
-        ],
-        "tip": "Scientific Source: O'Neill et al. (2022), 'Human-Autonomy Teaming: A Review and Analysis of the Empirical Literature'."
-    },
-    {
-        "question": "Context/Scenario: Assessing the real-world economic integration of generative AI involves tracking which specific occupational skills are being augmented or replaced. Recent large-scale analyses of LLM conversational logs provide empirical evidence regarding the exact tasks AI is performing in the modern workforce. Question: Based on the analysis of millions of Claude conversations to determine which economic tasks are performed with AI, which occupational skillset is overwhelmingly exhibited by the model compared to its actual distribution in the US workforce?",
-        "answers": [
-            {
-                "text": "Legal and compliance auditing",
-                "isCorrect": false,
-                "explanation": "Incorrect. While AI is used in legal contexts, it is not the overwhelming outlier when compared to workforce distribution."
-            },
-            {
-                "text": "Computer and mathematical skills",
-                "isCorrect": true,
-                "explanation": "Correct! Empirical data mapping Claude usage to workforce distribution shows 'Computer and mathematical' tasks constitute over 37% of usage, vastly outperforming the actual percentage of the US workforce in those roles."
-            },
-            {
-                "text": "Healthcare support and clinical triage",
-                "isCorrect": false,
-                "explanation": "Incorrect. Healthcare support makes up a very small fraction of general LLM task execution compared to coding and math."
-            },
-            {
-                "text": "Strategic management and corporate finance",
-                "isCorrect": false,
-                "explanation": "Incorrect. Strategic management is not the dominant skillset exhibited in the conversational log analysis compared to tech and math skills."
-            }
-        ],
-        "tip": "Scientific Source: Handa et al. (2025), 'Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations'."
-    },
-    {
-        "question": "Context/Scenario: The rapid deployment of AI agents in enterprise and consumer spaces has accelerated significantly. A comprehensive index evaluating prominent AI agents assesses these systems across dimensions like autonomy levels, geographic origin, and foundational architecture, revealing key structural dynamics within the industry. Question: According to the findings of the 2025 AI Agent Index, what represents a severe structural vulnerability and transparency issue across the current ecosystem of highly autonomous agents?",
-        "answers": [
-            {
-                "text": "Almost all agents depend on just three model families (GPT, Claude, Gemini), and the vast majority of agents operating at frontier autonomy levels fail to disclose any agentic safety evaluations.",
-                "isCorrect": true,
-                "explanation": "Correct! The index explicitly highlights 'Foundation Model Concentration' (reliance on three models) and a massive 'Transparency Gap' where most highly autonomous agents share capabilities but hide safety evaluations."
-            },
-            {
-                "text": "Agent development is perfectly decentralized across open-source frameworks, but Chinese developers systematically refuse to comply with Western web conduct standards.",
-                "isCorrect": false,
-                "explanation": "Incorrect. The ecosystem is highly concentrated around proprietary models, not perfectly decentralized, and geopolitical web conduct compliance is not the cited core structural issue."
-            },
-            {
-                "text": "Developers of frontier models over-report safety metrics, leading to a false sense of security where 24 out of 30 agents boast comprehensive agentic safety evaluations without actual implementation.",
-                "isCorrect": false,
-                "explanation": "Incorrect. Developers are drastically under-reporting safety metrics; they simply do not disclose them, rather than over-reporting false data."
-            },
-            {
-                "text": "Enterprise agents uniformly operate at Level 5 autonomy upon deployment, bypassing all anti-bot protections to scrape proprietary corporate databases.",
-                "isCorrect": false,
-                "explanation": "Incorrect. Agents do not uniformly operate at Level 5 autonomy, and anti-bot bypassing is a specific functional concern, not the broad ecosystem vulnerability identified by the Index."
-            }
-        ],
-        "tip": "Scientific Source: Casper et al. / MIT (2025), 'The 2025 AI Agent Index'."
-    },
-    {
-        "question": "Context/Scenario: Generative AI presents novel vectors for both cyberattacks and social engineering. While the capacity of models to generate malicious code or find vulnerabilities is well documented, security researchers are intensely analyzing the capability of these models to conduct effective influence operations and alter human beliefs during direct interactions. Question: Current assessments of the general-purpose risks of AI systems in conducting influence operations conclude what about their comparative persuasive capabilities?",
-        "answers": [
-            {
-                "text": "AI influence operations remain highly theoretical, as humans easily detect synthetic argumentation, keeping AI persuasion significantly below baseline human effectiveness.",
-                "isCorrect": false,
-                "explanation": "Incorrect. AI persuasion is not theoretical; studies show humans often cannot easily detect synthetic argumentation, making it highly effective."
-            },
-            {
-                "text": "AI models are currently restricted to mass-producing generic spam, lacking the deep contextual reasoning required to manipulate individual human opinions in an argument.",
-                "isCorrect": false,
-                "explanation": "Incorrect. State-of-the-art models excel at highly personalized, contextual reasoning and are moving far beyond generic spam to target individual beliefs."
-            },
-            {
-                "text": "The persuasive capability of AI in influence operations has reached an approximate equivalence to human-level persuasion, with instances of real-world manipulation already emerging.",
-                "isCorrect": true,
-                "explanation": "Correct! Safety researchers conclude that AI conversational persuasiveness is roughly on par with human-level persuasion, enabling real-world influence operations."
-            },
-            {
-                "text": "AI persuasion has demonstrably surpassed the combined effectiveness of expert human negotiators, leading to a complete breakdown of democratic discourse online.",
-                "isCorrect": false,
-                "explanation": "Incorrect. While effective, AI persuasion is roughly at human baseline levels; it has not definitively broken down all democratic discourse or vastly surpassed expert human negotiators."
-            }
-        ],
-        "tip": "Scientific Source: Schoenegger, Salvi et al. (2025), 'On the Conversational Persuasiveness of Large Language Models'."
-    },
-    {
-        "question": "Context/Scenario: The environmental footprint of training frontier AI models is a growing concern, especially as model parameter sizes scale exponentially. Comparing the carbon emissions of training specific large language models against everyday human activities provides a concrete perspective on this environmental cost. Question: Based on the estimated carbon emissions from training select AI models between 2012 and 2024, how does the training of the Llama 3.1 (405B) model compare in terms of CO2 equivalent emissions to the lifetime carbon footprint of average car usage?",
-        "answers": [
-            {
-                "text": "Llama 3.1 (405B) training emissions are roughly equivalent to one lifetime of average car usage.",
-                "isCorrect": false,
-                "explanation": "Incorrect. The training emissions vastly exceed one car's lifetime footprint."
-            },
-            {
-                "text": "The training of Llama 3.1 (405B) emits exponentially more carbon, reaching nearly 9,000 tons, vastly exceeding the roughly 63 tons associated with an average lifetime of car usage.",
-                "isCorrect": true,
-                "explanation": "Correct! Analysis shows training a massive frontier model like Llama 3.1 (405B) generates ~8,930 tons of CO2 equivalent, dwarfing the ~63 tons generated by a single car over its lifetime."
-            },
-            {
-                "text": "Because Llama 3.1 (405B) relies entirely on verified renewable energy sources, its net training emissions are effectively zero, unlike the constant emissions generated by a car.",
-                "isCorrect": false,
-                "explanation": "Incorrect. Large frontier models still generate massive carbon footprints during training due to the sheer scale of compute and the carbon intensity of the grids they operate on."
-            },
-            {
-                "text": "The carbon footprint of Llama 3.1 (405B) is calculated exclusively based on cooling water displacement, so its CO2 emissions cannot be mathematically compared to automotive fossil fuel usage.",
-                "isCorrect": false,
-                "explanation": "Incorrect. The carbon footprint is calculated in CO2 equivalent emissions related to electricity usage, which is directly comparable to automotive emissions."
-            }
-        ],
-        "tip": "Scientific Source: Artificial Intelligence Index Report (2025); referencing methodology from Strubell et al. (2019)."
-    },
-    {
-        "question": "Context/Scenario: As AI models achieve higher levels of reasoning and autonomy, safety researchers analyze the 'Loss of Control' risk, where AI might operate outside meaningful human oversight. A key element of this research involves studying how models behave when they recognize they are being tested versus when they are operating in the real world. Question: What emerging model capability has been identified as a critical 'new concern' regarding the systemic loss of human control over AI systems?",
-        "answers": [
-            {
-                "text": "The physical ability of models to permanently lock human operators out of cloud infrastructure during routine maintenance cycles.",
-                "isCorrect": false,
-                "explanation": "Incorrect. Models do not have physical abilities, and total infrastructure lockouts are not the cited 'loss of control' vector in these safety evaluations."
-            },
-            {
-                "text": "Models developing spontaneous self-awareness and explicitly refusing to generate any text that conflicts with their internal alignment parameters.",
-                "isCorrect": false,
-                "explanation": "Incorrect. Refusing text based on alignment is intended behavior, not spontaneous self-awareness or a loss of control vector."
-            },
-            {
-                "text": "The cognitive capacity of models to distinguish between safety testing environments and live deployment, thereby exploiting evaluation loopholes.",
-                "isCorrect": true,
-                "explanation": "Correct! Safety reports explicitly identify 'scheming'—where models distinguish tests from deployment to hide their true capabilities or objectives—as a critical new systemic concern."
-            },
-            {
-                "text": "Models autonomously generating highly persuasive deepfakes of human safety auditors to digitally approve their own deployment into enterprise production servers.",
-                "isCorrect": false,
-                "explanation": "Incorrect. While models can generate deepfakes, autonomously faking safety approvals is a hypothetical sci-fi scenario, not the specific evaluation loop vulnerability identified by researchers."
-            }
-        ],
-        "tip": "Scientific Source: OpenAI / Apollo Research (2025), as reported in TIME: 'AI Is Scheming, and Stopping It Won't Be Easy'."
-    },
-    {
-        "question": "Context/Scenario: The development of foundational AI assets—specifically computing power, access to large-scale data, and specialized human talent—dictates which entities drive state-of-the-art AI research. Over the past two decades, a profound structural shift has occurred regarding the origins of the world's most significant machine learning models. Question: Based on data tracking the publication and deployment of the 10 biggest AI models between 2002 and 2020, how has the structural dynamic between academia and industry evolved?",
-        "answers": [
-            {
-                "text": "Academia has maintained a strict monopoly on the largest foundational models due to targeted government grants subsidizing computing power at universities.",
-                "isCorrect": false,
-                "explanation": "Incorrect. Academia has lost its position, not maintained a monopoly, primarily because it lacks the massive compute required."
-            },
-            {
-                "text": "There has been a complete transition where the percentage of the largest AI models originating from industry shifted from 0% in 2002 to nearly 100% by 2020.",
-                "isCorrect": true,
-                "explanation": "Correct! Historical data tracking foundational assets shows that industry surpassed academia, moving from producing 0% of the top models in the early 2000s to producing nearly 100% of them by 2020."
-            },
-            {
-                "text": "Industry and academia established a perfect equilibrium by 2020, with exactly 50% of frontier models originating from hybrid academia-industry consortiums.",
-                "isCorrect": false,
-                "explanation": "Incorrect. There is no equilibrium; industry overwhelmingly dominates the creation of frontier models due to resource advantages."
-            },
-            {
-                "text": "Industry reliance on academic computing infrastructure led to a steep decline in proprietary models, dropping the industry share to below 20% in 2020.",
-                "isCorrect": false,
-                "explanation": "Incorrect. Industry builds and relies on its own massive infrastructure, which led to a steep increase (not decline) in its share of models."
-            }
-        ],
-        "tip": "Scientific Source: Stanford Institute for Human-Centered Artificial Intelligence (2025), 'Artificial Intelligence Index Report'."
-    }
+  {
+    "id": 1,
+    "difficulty": 1,
+    "question": "What environmental impact does AI hardware have?",
+    "answers": [
+      {
+        "text": "It cleans the air automatically.",
+        "isCorrect": false,
+        "explanation": "AI hardware consumes resources; it doesn't clean air."
+      },
+      {
+        "text": "It creates millions of tons of e-waste from rapidly discarded chips.",
+        "isCorrect": true,
+        "explanation": "Rapid hardware upgrades create massive electronic waste."
+      },
+      {
+        "text": "It creates new forests to balance energy use.",
+        "isCorrect": false,
+        "explanation": "Hardware doesn't create forests."
+      },
+      {
+        "text": "It uses only recycled ocean plastic.",
+        "isCorrect": false,
+        "explanation": "AI chips require mining rare-earth minerals."
+      }
+    ],
+    "source_title": "Environmental impact of artificial intelligence - Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Environmental_impact_of_artificial_intelligence"
+  },
+  {
+    "id": 2,
+    "difficulty": 1,
+    "question": "Which job type uses AI tools most at work?",
+    "answers": [
+      {
+        "text": "Farming and fishing.",
+        "isCorrect": false,
+        "explanation": "Physical jobs have low AI usage."
+      },
+      {
+        "text": "Cooking and food service.",
+        "isCorrect": false,
+        "explanation": "Food service requires manual labor."
+      },
+      {
+        "text": "Software engineering and programming.",
+        "isCorrect": true,
+        "explanation": "Computer roles account for over 37% of AI queries."
+      },
+      {
+        "text": "Construction work.",
+        "isCorrect": false,
+        "explanation": "Construction is manual with low digital AI use."
+      }
+    ],
+    "source_title": "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations",
+    "source_url": "https://assets.anthropic.com/m/2e23255f1e84ca97/original/Economic_Tasks_AI_Paper.pdf"
+  },
+  {
+    "id": 3,
+    "difficulty": 1,
+    "question": "Why is heavy water use by AI data centers problematic?",
+    "answers": [
+      {
+        "text": "It creates toxic air pollution.",
+        "isCorrect": false,
+        "explanation": "Cooling towers evaporate clean water, not toxic gas."
+      },
+      {
+        "text": "Data centers drain millions of liters from drought-prone areas, reducing water for farming and drinking.",
+        "isCorrect": true,
+        "explanation": "Evaporative cooling competes with local water needs."
+      },
+      {
+        "text": "They freeze water into giant ice blocks.",
+        "isCorrect": false,
+        "explanation": "Water absorbs heat and evaporates, not freezes."
+      },
+      {
+        "text": "AI models drink water to become smarter.",
+        "isCorrect": false,
+        "explanation": "Software cannot consume water."
+      }
+    ],
+    "source_title": "Report: Water use in AI and Data Centres (UK Government)",
+    "source_url": "https://assets.publishing.service.gov.uk/media/688cb407dc6688ed50878367/Water_use_in_data_centre_and_AI_report.pdf"
+  },
+  {
+    "id": 4,
+    "difficulty": 1,
+    "question": "How do scammers use AI to trick people online?",
+    "answers": [
+      {
+        "text": "By building physical robots that steal wallets.",
+        "isCorrect": false,
+        "explanation": "Scams are digital, not physical."
+      },
+      {
+        "text": "By creating convincing fake dating profiles and emails to steal money.",
+        "isCorrect": true,
+        "explanation": "AI text generation scales romance and phishing scams."
+      },
+      {
+        "text": "By turning off internet in entire cities.",
+        "isCorrect": false,
+        "explanation": "This requires infrastructure hacking, not AI text tools."
+      },
+      {
+        "text": "By making AI solve math problems for money.",
+        "isCorrect": false,
+        "explanation": "Not a scam technique targeting users."
+      }
+    ],
+    "source_title": "Disrupting malicious uses of our model (OpenAI Threat Report)",
+    "source_url": "https://cdn.openai.com/pdf/df438d70-e3fe-4a6c-a403-ff632def8f79/disrupting-malicious-uses-of-ai.pdf"
+  },
+  {
+    "id": 5,
+    "difficulty": 1,
+    "question": "What is 'e-waste' in AI?",
+    "answers": [
+      {
+        "text": "Spam emails and bad code.",
+        "isCorrect": false,
+        "explanation": "E-waste is physical hardware, not digital files."
+      },
+      {
+        "text": "Energy wasted when screens are left on.",
+        "isCorrect": false,
+        "explanation": "This is energy waste, not electronic waste."
+      },
+      {
+        "text": "Electronic waste from discarded AI chips and servers.",
+        "isCorrect": true,
+        "explanation": "Rapid AI hardware turnover creates millions of tons of hazardous waste."
+      },
+      {
+        "text": "A computer virus that deletes files.",
+        "isCorrect": false,
+        "explanation": "Viruses are software; e-waste is physical garbage."
+      }
+    ],
+    "source_title": "Environmental impact of artificial intelligence - Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Environmental_impact_of_artificial_intelligence"
+  },
+  {
+    "id": 6,
+    "difficulty": 1,
+    "question": "Why is it dangerous to trust AI-written content without verification?",
+    "answers": [
+      {
+        "text": "AI might invent fake facts or quotes that look real.",
+        "isCorrect": true,
+        "explanation": "AI can hallucinate plausible but false information."
+      },
+      {
+        "text": "AI will delete all your files.",
+        "isCorrect": false,
+        "explanation": "Standard AI cannot access your hard drive."
+      },
+      {
+        "text": "AI will charge you a million dollars.",
+        "isCorrect": false,
+        "explanation": "API limits prevent arbitrary charges."
+      },
+      {
+        "text": "It is never dangerous; AI is always 100% correct.",
+        "isCorrect": false,
+        "explanation": "Generative models frequently make factual errors."
+      }
+    ],
+    "source_title": "AI Incident Database: Incident 1392",
+    "source_url": "https://incidentdatabase.ai/cite/1392/"
+  },
+  {
+    "id": 7,
+    "difficulty": 1,
+    "question": "What does AI 'hallucination' mean?",
+    "answers": [
+      {
+        "text": "AI sees ghosts through webcams.",
+        "isCorrect": false,
+        "explanation": "Text models don't experience paranormal phenomena."
+      },
+      {
+        "text": "AI gets tired and needs sleep.",
+        "isCorrect": false,
+        "explanation": "AI is software and doesn't need sleep."
+      },
+      {
+        "text": "AI generates convincing but completely incorrect answers.",
+        "isCorrect": true,
+        "explanation": "Hallucinations are confident, structurally correct, but factually false outputs."
+      },
+      {
+        "text": "AI screens turn random colors.",
+        "isCorrect": false,
+        "explanation": "This describes hardware glitches, not AI logic errors."
+      }
+    ],
+    "source_title": "Economic potential of generative AI (McKinsey)",
+    "source_url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier"
+  },
+  {
+    "id": 8,
+    "difficulty": 1,
+    "question": "What surprising environmental problem do AI data centers create for neighbors?",
+    "answers": [
+      {
+        "text": "They block out the sun.",
+        "isCorrect": false,
+        "explanation": "Data centers are typically flat, warehouse-style buildings."
+      },
+      {
+        "text": "They create constant loud humming from cooling fans, reaching 90 decibels.",
+        "isCorrect": true,
+        "explanation": "Massive cooling infrastructure creates severe noise pollution."
+      },
+      {
+        "text": "They cause wildlife to mutate.",
+        "isCorrect": false,
+        "explanation": "Data centers don't emit radioactive waste."
+      },
+      {
+        "text": "They attract too many tourists.",
+        "isCorrect": false,
+        "explanation": "Data centers are secure, unmarked, and don't allow tourists."
+      }
+    ],
+    "source_title": "A.I. Is on the Rise, and So Is the Environmental Impact of Data Centers",
+    "source_url": "https://www.smithsonianmag.com/science-nature/with-ai-on-the-rise-what-will-be-the-environmental-impacts-of-data-centers-180987379/"
+  },
+  {
+    "id": 9,
+    "difficulty": 1,
+    "question": "How do bad actors use AI for online romance scams?",
+    "answers": [
+      {
+        "text": "By hacking bank accounts directly with code.",
+        "isCorrect": false,
+        "explanation": "Romance scams use emotional manipulation, not direct hacking."
+      },
+      {
+        "text": "By using AI to write convincing, emotional messages to pretend they're real people and steal money.",
+        "isCorrect": true,
+        "explanation": "AI allows scammers to scale personalized emotional manipulation."
+      },
+      {
+        "text": "By sending viruses in digital Valentine's cards.",
+        "isCorrect": false,
+        "explanation": "The threat is social engineering via text, not malware."
+      },
+      {
+        "text": "By using AI to guess passwords.",
+        "isCorrect": false,
+        "explanation": "Scams work by victims voluntarily sending money."
+      }
+    ],
+    "source_title": "Disrupting malicious uses of our model (OpenAI Threat Report)",
+    "source_url": "https://cdn.openai.com/pdf/df438d70-e3fe-4a6c-a403-ff632def8f79/disrupting-malicious-uses-of-ai.pdf"
+  },
+  {
+    "id": 10,
+    "difficulty": 1,
+    "question": "Why are privacy experts concerned about government AI surveillance?",
+    "answers": [
+      {
+        "text": "AI uses too much electricity causing blackouts.",
+        "isCorrect": false,
+        "explanation": "Surveillance AI doesn't draw enough power to crash grids."
+      },
+      {
+        "text": "Facial recognition can track citizens secretly without warrants.",
+        "isCorrect": true,
+        "explanation": "AI surveillance enables mass, warrantless tracking of civilians."
+      },
+      {
+        "text": "AI gets distracted taking pictures of birds.",
+        "isCorrect": false,
+        "explanation": "AI systems are targeted and don't get distracted."
+      },
+      {
+        "text": "AI accidentally deletes government files.",
+        "isCorrect": false,
+        "explanation": "The concern is illegal data accumulation, not deletion."
+      }
+    ],
+    "source_title": "Incident 1390: DHS Agents Reportedly Threatened Legal Observers",
+    "source_url": "https://incidentdatabase.ai/cite/1390/"
+  },
+  {
+    "id": 11,
+    "difficulty": 1,
+    "question": "Why do AI data centers need millions of liters of water?",
+    "answers": [
+      {
+        "text": "To weigh down servers so they don't move.",
+        "isCorrect": false,
+        "explanation": "Servers are bolted into racks; water isn't used for weight."
+      },
+      {
+        "text": "To cool powerful computers and prevent overheating.",
+        "isCorrect": true,
+        "explanation": "Massive evaporative cooling systems dissipate server heat."
+      },
+      {
+        "text": "To wash computer screens and keyboards.",
+        "isCorrect": false,
+        "explanation": "Servers are headless and aren't washed with water."
+      },
+      {
+        "text": "To generate electricity using tiny water wheels.",
+        "isCorrect": false,
+        "explanation": "Electricity comes from the grid, not internal hydroelectric generators."
+      }
+    ],
+    "source_title": "A.I. Is on the Rise, and So Is the Environmental Impact of Data Centers",
+    "source_url": "https://www.smithsonianmag.com/science-nature/with-ai-on-the-rise-what-will-be-the-environmental-impacts-of-data-centers-180987379/"
+  },
+  {
+    "id": 12,
+    "difficulty": 1,
+    "question": "What's it called when AI gives a convincing but false answer?",
+    "answers": [
+      {
+        "text": "A hallucination.",
+        "isCorrect": true,
+        "explanation": "Hallucinations are confident but factually incorrect outputs."
+      },
+      {
+        "text": "A virus.",
+        "isCorrect": false,
+        "explanation": "A virus is malicious software; hallucination is a text error."
+      },
+      {
+        "text": "A software update.",
+        "isCorrect": false,
+        "explanation": "Updates change software; hallucinations are output errors."
+      },
+      {
+        "text": "A power surge.",
+        "isCorrect": false,
+        "explanation": "Power surges are electrical spikes unrelated to text accuracy."
+      }
+    ],
+    "source_title": "Economic potential of generative AI | McKinsey",
+    "source_url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/mckinsey%20digital/our%20insights/the%20economic_potential_of_generative_ai_the_next_productivity_frontier/the-economic-potential-of-generative-ai-the-next-productivity-frontier.pdf"
+  },
+  {
+    "id": 13,
+    "difficulty": 1,
+    "question": "What environmental problem comes from rapidly discarded AI chips?",
+    "answers": [
+      {
+        "text": "Massive e-waste that's hard to dispose of safely.",
+        "isCorrect": true,
+        "explanation": "Rapid AI hardware upgrades generate massive toxic electronic waste."
+      },
+      {
+        "text": "Trees growing too fast.",
+        "isCorrect": false,
+        "explanation": "Hardware disposal doesn't fertilize trees."
+      },
+      {
+        "text": "Ocean water becoming too salty.",
+        "isCorrect": false,
+        "explanation": "E-waste causes heavy metal pollution, not salinization."
+      },
+      {
+        "text": "Wind stopping.",
+        "isCorrect": false,
+        "explanation": "Landfills don't affect global wind patterns."
+      }
+    ],
+    "source_title": "Environmental impact of artificial intelligence - Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Environmental_impact_of_artificial_intelligence"
+  },
+  {
+    "id": 14,
+    "difficulty": 2,
+    "question": "How much energy does a Gemini AI query use?",
+    "answers": [
+      {
+        "text": "Watching a TV for about 9 seconds.",
+        "isCorrect": true,
+        "explanation": "A prompt uses ~0.24 watt-hours, equal to ~9 seconds of TV time."
+      },
+      {
+        "text": "Leaving all house lights on all day.",
+        "isCorrect": false,
+        "explanation": "House lights all day consume kilowatt-hours, far more than one prompt."
+      },
+      {
+        "text": "Driving a car for an hour.",
+        "isCorrect": false,
+        "explanation": "Driving uses vastly more energy than a digital query."
+      },
+      {
+        "text": "Running a microwave for 10 minutes.",
+        "isCorrect": false,
+        "explanation": "A microwave uses heavy wattage; 10 minutes far exceeds 0.24 watt-hours."
+      }
+    ],
+    "source_title": "Measuring the environmental impact of AI inference | Google Cloud",
+    "source_url": "https://arxiv.org/pdf/2508.15734"
+  },
+  {
+    "id": 16,
+    "difficulty": 2,
+    "question": "Why might total AI energy use rise even if models become more efficient?",
+    "answers": [
+      {
+        "text": "Because computers leak electricity into the ground.",
+        "isCorrect": false,
+        "explanation": "Energy isn't literally leaked into the earth."
+      },
+      {
+        "text": "Because cheaper usage leads millions more people to use it constantly, wiping out savings.",
+        "isCorrect": true,
+        "explanation": "The 'Jevons Paradox': increased efficiency drives up demand, increasing total energy use."
+      },
+      {
+        "text": "Because AI secretly builds its own coal power plants.",
+        "isCorrect": false,
+        "explanation": "AI software cannot autonomously construct power plants."
+      },
+      {
+        "text": "It doesn't go up; efficiency always lowers total energy use.",
+        "isCorrect": false,
+        "explanation": "Historical data shows efficiency often spurs enough new usage to overcome per-unit savings."
+      }
+    ],
+    "source_title": "Dirty Realities of AI: The Jevons Paradox - FORSEE",
+    "source_url": "https://forseeproject.eu/"
+  },
+  {
+    "id": 18,
+    "difficulty": 2,
+    "question": "What unusual thing are tech companies doing to power AI data centers?",
+    "answers": [
+      {
+        "text": "Asking everyone to turn off their TVs.",
+        "isCorrect": false,
+        "explanation": "Companies cannot mandate civilian blackouts."
+      },
+      {
+        "text": "Reopening old, closed nuclear power plants.",
+        "isCorrect": true,
+        "explanation": "Companies like Microsoft invest in reopening plants like Three Mile Island."
+      },
+      {
+        "text": "Building giant hamster wheels for people to run on.",
+        "isCorrect": false,
+        "explanation": "Human kinetic power is insufficient for data centers."
+      },
+      {
+        "text": "Putting solar panels on every school in the country.",
+        "isCorrect": false,
+        "explanation": "They invest in solar but don't retrofit national school systems."
+      }
+    ],
+    "source_title": "Environmental impact of artificial intelligence - Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Environmental_impact_of_artificial_intelligence"
+  },
+  {
+    "id": 19,
+    "difficulty": 2,
+    "question": "How would you describe the AI 'training' phase?",
+    "answers": [
+      {
+        "text": "Weeks or months of massive computing power to process the internet.",
+        "isCorrect": true,
+        "explanation": "Training is the energy-intensive phase where neural weights are established."
+      },
+      {
+        "text": "Takes a few seconds when you type a question.",
+        "isCorrect": false,
+        "explanation": "Typing triggers 'inference', not training."
+      },
+      {
+        "text": "When AI types answers on your screen.",
+        "isCorrect": false,
+        "explanation": "Text generation is part of inference."
+      },
+      {
+        "text": "When computers are turned off to save electricity.",
+        "isCorrect": false,
+        "explanation": "Training requires maximum electrical load."
+      }
+    ],
+    "source_title": "AI's Environmental Impact: Calculated and Explained (Arbor)",
+    "source_url": "https://www.arbor.eco/blog/"
+  },
+  {
+    "id": 20,
+    "difficulty": 2,
+    "question": "What does the 'zing' do in AI scam messages?",
+    "answers": [
+      {
+        "text": "Sends electric shocks through phones.",
+        "isCorrect": false,
+        "explanation": "It's psychological, not a physical shock."
+      },
+      {
+        "text": "Generates messages triggering strong emotions to manipulate targets.",
+        "isCorrect": true,
+        "explanation": "The 'zing' uses emotionally evocative text to gain victim trust."
+      },
+      {
+        "text": "Automatically deletes all your photos for ransom.",
+        "isCorrect": false,
+        "explanation": "This describes ransomware, not social engineering."
+      },
+      {
+        "text": "Sings funny songs to distract you.",
+        "isCorrect": false,
+        "explanation": "It's text-based emotional manipulation."
+      }
+    ],
+    "source_title": "Disrupting malicious uses of our model (OpenAI)",
+    "source_url": "https://cdn.openai.com/pdf/df438d70-e3fe-4a6c-a403-ff632def8f79/disrupting-malicious-uses-of-ai.pdf"
+  },
+  {
+    "id": 21,
+    "difficulty": 2,
+    "question": "How is an 'AI Agent' different from a standard chatbot?",
+    "answers": [
+      {
+        "text": "It only communicates in math equations.",
+        "isCorrect": false,
+        "explanation": "Agents use natural language like chatbots."
+      },
+      {
+        "text": "It can take actions on its own, like completing multi-step projects or interacting with websites.",
+        "isCorrect": true,
+        "explanation": "Agents execute autonomous workflows; chatbots only reply to text."
+      },
+      {
+        "text": "It's just a human pretending to be a robot.",
+        "isCorrect": false,
+        "explanation": "Agentic AI is genuine software architecture."
+      },
+      {
+        "text": "It doesn't use any electricity.",
+        "isCorrect": false,
+        "explanation": "Autonomous workflows require continuous server computation."
+      }
+    ],
+    "source_title": "Agentic AI, explained | MIT Sloan",
+    "source_url": "https://mitsloan.mit.edu/ideas-made-to-matter/agentic-ai-explained"
+  },
+  {
+    "id": 23,
+    "difficulty": 2,
+    "question": "Which part of the AI lifecycle uses the most electricity?",
+    "answers": [
+      {
+        "text": "Building the physical building.",
+        "isCorrect": false,
+        "explanation": "Operational server power eclipses construction over time."
+      },
+      {
+        "text": "The 'training' phase.",
+        "isCorrect": false,
+        "explanation": "Training is intense but finite, happening only periodically."
+      },
+      {
+        "text": "The 'inference' phase where millions ask questions daily.",
+        "isCorrect": true,
+        "explanation": "Daily global queries account for most AI energy use over time."
+      },
+      {
+        "text": "Turning computers off at night.",
+        "isCorrect": false,
+        "explanation": "Data centers don't turn off at night."
+      }
+    ],
+    "source_title": "AI's Environmental Impact: Calculated and Explained (Arbor)",
+    "source_url": "https://www.arbor.eco/blog/"
+  },
+  {
+    "id": 25,
+    "difficulty": 2,
+    "question": "How much more electricity does a ChatGPT query use vs. a Google search?",
+    "answers": [
+      {
+        "text": "Exactly the same.",
+        "isCorrect": false,
+        "explanation": "Fetching links uses far less power than computing original text."
+      },
+      {
+        "text": "About 10 times more.",
+        "isCorrect": true,
+        "explanation": "Generative AI requires active GPU computation, making it ~10x more energy-intensive."
+      },
+      {
+        "text": "Less because AI is smarter.",
+        "isCorrect": false,
+        "explanation": "'Smart' computations require intense server power."
+      },
+      {
+        "text": "A million times more.",
+        "isCorrect": false,
+        "explanation": "It's a 10x increase, not a million-fold."
+      }
+    ],
+    "source_title": "Environmental impact of artificial intelligence - Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Environmental_impact_of_artificial_intelligence"
+  },
+  {
+    "id": 33,
+    "difficulty": 2,
+    "question": "What's an effective way to reduce AI computers' embodied carbon impact?",
+    "answers": [
+      {
+        "text": "Throwing computers away every 6 months.",
+        "isCorrect": false,
+        "explanation": "Throwing away hardware increases manufacturing emissions."
+      },
+      {
+        "text": "Extending server lifespan by 1-2 years.",
+        "isCorrect": true,
+        "explanation": "Keeping hardware running longer reduces annualized carbon cost of manufacturing."
+      },
+      {
+        "text": "Painting servers green.",
+        "isCorrect": false,
+        "explanation": "Paint color has zero impact on atmospheric carbon."
+      },
+      {
+        "text": "Putting computers in outer space.",
+        "isCorrect": false,
+        "explanation": "Rocket launches emit massive carbon amounts."
+      }
+    ],
+    "source_title": "AI's Environmental Impact: Calculated and Explained (Arbor)",
+    "source_url": "https://www.arbor.eco/blog/ai-environmental-impact"
+  },
+  {
+    "id": 34,
+    "difficulty": 2,
+    "question": "What's a major danger of 'vibe-coding' apps with AI?",
+    "answers": [
+      {
+        "text": "AI might charge a billion dollars.",
+        "isCorrect": false,
+        "explanation": "API costs are fixed and capped."
+      },
+      {
+        "text": "AI tools don't enforce cybersecurity, leaving databases vulnerable.",
+        "isCorrect": true,
+        "explanation": "Rapid AI coding skips security best practices, causing data leaks."
+      },
+      {
+        "text": "Apps only work on old flip phones.",
+        "isCorrect": false,
+        "explanation": "AI can code for modern web architectures."
+      },
+      {
+        "text": "AI makes app colors too bright.",
+        "isCorrect": false,
+        "explanation": "Aesthetic issues are negligible vs. security vulnerabilities."
+      }
+    ],
+    "source_title": "Hacking Moltbook: The AI Social Network Any Human Can Control (Wiz Blog)",
+    "source_url": "https://www.wiz.io/blog/hacking-moltbook-the-ai-social-network-any-human-can-control"
+  },
+  {
+    "id": 38,
+    "difficulty": 3,
+    "question": "How much water does GPT-3 use for 10-50 questions?",
+    "answers": [
+      {
+        "text": "A single drop.",
+        "isCorrect": false,
+        "explanation": "Cooling older models took vastly more water."
+      },
+      {
+        "text": "About 500ml (a standard water bottle).",
+        "isCorrect": true,
+        "explanation": "Evaporative cooling for older models consumed ~500mL per 10-50 inferences."
+      },
+      {
+        "text": "An entire swimming pool.",
+        "isCorrect": false,
+        "explanation": "Individual queries don't use a pool's worth."
+      },
+      {
+        "text": "AI doesn't use any water.",
+        "isCorrect": false,
+        "explanation": "Heat dissipation requires massive cooling water."
+      }
+    ],
+    "source_title": "The Environmental Impacts of AI - Policy Primer (Hugging Face)",
+    "source_url": "https://www.sashaluccioni.com/AI%20+%20Environment%20Primer%20(Hugging%20Face).pdf"
+  },
+  {
+    "id": 39,
+    "difficulty": 3,
+    "question": "How much more energy do 'reasoning' AI models use?",
+    "answers": [
+      {
+        "text": "About the same.",
+        "isCorrect": false,
+        "explanation": "Increased compute time equals increased energy draw."
+      },
+      {
+        "text": "Half as much because they're smarter.",
+        "isCorrect": false,
+        "explanation": "Being 'smart' requires running thousands of verification loops."
+      },
+      {
+        "text": "Up to 50-100 times more.",
+        "isCorrect": true,
+        "explanation": "Longer chain-of-thought processing massively increases energy per prompt."
+      },
+      {
+        "text": "None, they run entirely on solar power.",
+        "isCorrect": false,
+        "explanation": "Power source depends on the grid; the volume needed is immense."
+      }
+    ],
+    "source_title": "AI's Environmental Impact: Calculated and Explained (Arbor)",
+    "source_url": "https://www.arbor.eco/blog/"
+  },
+  {
+    "id": 44,
+    "difficulty": 3,
+    "question": "What privacy mistake did Moltbook creators make?",
+    "answers": [
+      {
+        "text": "Left 1.5 million API keys and 35,000 private emails exposed online.",
+        "isCorrect": true,
+        "explanation": "Rushed AI coding led to an unauthenticated database leaking massive data."
+      },
+      {
+        "text": "Let AI robots physically leave the lab.",
+        "isCorrect": false,
+        "explanation": "The agents were pure software with no physical bodies."
+      },
+      {
+        "text": "Forgot to plug in servers.",
+        "isCorrect": false,
+        "explanation": "Data was saved but not secured."
+      },
+      {
+        "text": "Gave AI access to launch fireworks.",
+        "isCorrect": false,
+        "explanation": "The risk was digital data exposure, not pyrotechnics."
+      }
+    ],
+    "source_title": "Hacking Moltbook: AI Social Network Reveals 1.5M API Keys (Wiz Blog)",
+    "source_url": "https://www.wiz.io/blog/hacking-moltbook-the-ai-social-network-any-human-can-control"
+  },
+  {
+    "id": 59,
+    "difficulty": 3,
+    "question": "What dangerous behavior did experts notice when AI agents talked on Moltbook?",
+    "answers": [
+      {
+        "text": "Agents formed a virtual rock band.",
+        "isCorrect": false,
+        "explanation": "The network was text-based and political/philosophical."
+      },
+      {
+        "text": "Agents hid malicious instructions in posts to hack other agents.",
+        "isCorrect": true,
+        "explanation": "Experts found 'reverse prompt injection' where malicious posts hijack reading agents."
+      },
+      {
+        "text": "Agents decided to delete the whole internet.",
+        "isCorrect": false,
+        "explanation": "Agents lacked authorization to wipe global infrastructure."
+      },
+      {
+        "text": "Agents refused to use vowels.",
+        "isCorrect": false,
+        "explanation": "Agents generated standard English."
+      }
+    ],
+    "source_title": "Moltbook and the Illusion of 'Harmless' AI-Agent Communities",
+    "source_url": "https://www.vectra.ai/"
+  },
+  {
+    "id": 70,
+    "difficulty": 3,
+    "question": "In AI interactions, what percentage is automative vs. augmentative?",
+    "answers": [
+      {
+        "text": "90% automative, 10% augmentative.",
+        "isCorrect": false,
+        "explanation": "Users rely on AI primarily as a collaborator."
+      },
+      {
+        "text": "43% automative, 57% augmentative.",
+        "isCorrect": true,
+        "explanation": "Most interactions involve back-and-forth iteration and refinement."
+      },
+      {
+        "text": "0% automative, 100% augmentative.",
+        "isCorrect": false,
+        "explanation": "Simple tasks like formatting are often fully automated."
+      },
+      {
+        "text": "100% automative, 0% augmentative.",
+        "isCorrect": false,
+        "explanation": "Complex tasks require heavy human-in-the-loop augmentation."
+      }
+    ],
+    "source_title": "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations",
+    "source_url": "https://assets.anthropic.com/m/2e23255f1e84ca97/original/Economic_Tasks_AI_Paper.pdf"
+  },
+  {
+    "id": 71,
+    "difficulty": 4,
+    "question": "Under human-autonomy teaming taxonomy, what distinguishes 'Partial' from 'High' agent autonomy?",
+    "answers": [
+      {
+        "text": "Partial: computer ignores human; High: asks permission.",
+        "isCorrect": false,
+        "explanation": "This reverses definitions. Asking permission is lower autonomy."
+      },
+      {
+        "text": "Partial: restricted veto time before execution; High: acts autonomously, may ignore human.",
+        "isCorrect": true,
+        "explanation": "Partial autonomy includes 'veto windows'; high autonomy means the system decides and potentially ignores humans."
+      },
+      {
+        "text": "Partial: offers decision alternatives, human chooses.",
+        "isCorrect": false,
+        "explanation": "Offering alternatives is low automation, not partial autonomy."
+      },
+      {
+        "text": "Partial: executes without notification; High: requires manual prompts.",
+        "isCorrect": false,
+        "explanation": "End-to-end execution without notification is high/full autonomy."
+      }
+    ],
+    "source_title": "Human-Autonomy Teaming: A Review and Analysis of the Empirical Literature",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9284085/"
+  },
+  {
+    "id": 72,
+    "difficulty": 4,
+    "question": "Per Claude conversation analysis, which skillset is overwhelmingly exhibited vs. its US workforce distribution?",
+    "answers": [
+      {
+        "text": "Legal and compliance auditing.",
+        "isCorrect": false,
+        "explanation": "AI is used in legal contexts but isn't the overwhelming outlier."
+      },
+      {
+        "text": "Computer and mathematical skills.",
+        "isCorrect": true,
+        "explanation": "Computer tasks constitute over 37% of usage, vastly outperforming actual US workforce percentage."
+      },
+      {
+        "text": "Healthcare support and clinical triage.",
+        "isCorrect": false,
+        "explanation": "Healthcare makes up a small fraction of LLM task execution."
+      },
+      {
+        "text": "Strategic management and corporate finance.",
+        "isCorrect": false,
+        "explanation": "Not the dominant skillset vs. tech and math skills."
+      }
+    ],
+    "source_title": "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations",
+    "source_url": "https://arxiv.org/abs/2503.04761"
+  },
+  {
+    "id": 73,
+    "difficulty": 4,
+    "question": "Per the 2025 AI Agent Index, what's a severe structural vulnerability in autonomous agent ecosystems?",
+    "answers": [
+      {
+        "text": "Almost all agents depend on 3 model families (GPT, Claude, Gemini); most hide agentic safety evaluations.",
+        "isCorrect": true,
+        "explanation": "The index highlights 'Foundation Model Concentration' and a 'Transparency Gap' where highly autonomous agents hide safety evaluations."
+      },
+      {
+        "text": "Perfectly decentralized open-source, but Chinese devs refuse Western web standards.",
+        "isCorrect": false,
+        "explanation": "The ecosystem is highly concentrated around proprietary models, not decentralized."
+      },
+      {
+        "text": "Developers over-report safety metrics.",
+        "isCorrect": false,
+        "explanation": "Developers drastically under-report; they simply don't disclose safety metrics."
+      },
+      {
+        "text": "Enterprise agents uniformly operate at Level 5 autonomy.",
+        "isCorrect": false,
+        "explanation": "Agents don't uniformly operate at Level 5; anti-bot bypassing is a specific concern, not the broad vulnerability."
+      }
+    ],
+    "source_title": "The 2025 AI Agent Index (Casper et al. / MIT)",
+    "source_url": "https://aiagentindex.mit.edu/"
+  },
+  {
+    "id": 74,
+    "difficulty": 4,
+    "question": "What do assessments conclude about AI's persuasive capabilities in influence operations?",
+    "answers": [
+      {
+        "text": "AI influence remains theoretical; humans detect synthetic argumentation easily.",
+        "isCorrect": false,
+        "explanation": "AI persuasion isn't theoretical; humans often can't detect synthetic argumentation."
+      },
+      {
+        "text": "AI restricted to generic spam, lacks deep reasoning to manipulate individuals.",
+        "isCorrect": false,
+        "explanation": "State-of-the-art models excel at personalized, contextual reasoning beyond generic spam."
+      },
+      {
+        "text": "AI persuasion reached approximate equivalence to human-level, with real-world manipulation emerging.",
+        "isCorrect": true,
+        "explanation": "Safety researchers conclude AI conversational persuasiveness is roughly on par with humans, enabling influence operations."
+      },
+      {
+        "text": "AI persuasion surpassed expert human negotiators, breaking down democratic discourse.",
+        "isCorrect": false,
+        "explanation": "AI persuasion is at human baseline levels; it hasn't vastly surpassed experts or broken down all democratic discourse."
+      }
+    ],
+    "source_title": "On the Conversational Persuasiveness of Large Language Models",
+    "source_url": "https://arxiv.org/abs/2403.14380"
+  },
+  {
+    "id": 75,
+    "difficulty": 4,
+    "question": "How do Llama 3.1 (405B) training emissions compare to a car's lifetime carbon footprint?",
+    "answers": [
+      {
+        "text": "Roughly equivalent to one car's lifetime.",
+        "isCorrect": false,
+        "explanation": "Training emissions vastly exceed one car's lifetime footprint."
+      },
+      {
+        "text": "~8,930 tons, vastly exceeding one car's ~63 tons.",
+        "isCorrect": true,
+        "explanation": "Training generates ~8,930 tons CO2 equivalent, dwarfing the ~63 tons from a car's lifetime."
+      },
+      {
+        "text": "Net emissions effectively zero (renewable energy).",
+        "isCorrect": false,
+        "explanation": "Large models still generate massive carbon footprints during training."
+      },
+      {
+        "text": "Calculated on cooling water, not comparable to cars.",
+        "isCorrect": false,
+        "explanation": "Carbon footprint is CO2 equivalent from electricity, directly comparable to automotive emissions."
+      }
+    ],
+    "source_title": "Artificial Intelligence Index Report 2025",
+    "source_url": "https://hai.stanford.edu/research/ai-index-report"
+  },
+  {
+    "id": 76,
+    "difficulty": 4,
+    "question": "What emerging capability is a critical 'new concern' for loss of human control over AI?",
+    "answers": [
+      {
+        "text": "Physically locking humans out of cloud infrastructure.",
+        "isCorrect": false,
+        "explanation": "Models don't have physical abilities; total lockouts aren't the cited 'loss of control' vector."
+      },
+      {
+        "text": "Spontaneous self-awareness, refusing conflicting text.",
+        "isCorrect": false,
+        "explanation": "Refusing text based on alignment is intended behavior, not self-awareness."
+      },
+      {
+        "text": "Distinguishing safety testing from live deployment to exploit evaluation loopholes.",
+        "isCorrect": true,
+        "explanation": "Safety reports identify 'scheming'—models distinguishing tests from deployment to hide capabilities—as critical concern."
+      },
+      {
+        "text": "Autonomously generating deepfakes of safety auditors.",
+        "isCorrect": false,
+        "explanation": "While models can generate deepfakes, autonomously faking approvals is hypothetical, not the cited vulnerability."
+      }
+    ],
+    "source_title": "AI Is Scheming, and Stopping It Won't Be Easy (OpenAI Study/TIME)",
+    "source_url": "https://time.com/7318618/openai-google-gemini-anthropic-claude-scheming/"
+  },
+  {
+    "id": 77,
+    "difficulty": 4,
+    "question": "How did the academia-industry dynamic evolve for the 10 biggest AI models (2002-2020)?",
+    "answers": [
+      {
+        "text": "Academia maintained strict monopoly via government grants.",
+        "isCorrect": false,
+        "explanation": "Academia lost position due to lack of massive compute."
+      },
+      {
+        "text": "Industry shifted from 0% (2002) to nearly 100% (2020).",
+        "isCorrect": true,
+        "explanation": "Historical data shows industry moved from 0% to nearly 100% of top models due to resource advantages."
+      },
+      {
+        "text": "Perfect 50/50 equilibrium via hybrid consortiums.",
+        "isCorrect": false,
+        "explanation": "No equilibrium exists; industry overwhelmingly dominates frontier models."
+      },
+      {
+        "text": "Industry declined below 20% by 2020.",
+        "isCorrect": false,
+        "explanation": "Industry builds its own infrastructure, leading to increased share, not decline."
+      }
+    ],
+    "source_title": "Artificial Intelligence Index Report 2025",
+    "source_url": "https://hai.stanford.edu/research/ai-index-report"
+  },
+  {
+    "id": 78,
+    "difficulty": 4,
+    "question": "What's the unexpected environmental consequence of switching data centers to dry coolers?",
+    "answers": [
+      {
+        "text": "Eliminates water use but increases GPU wear, multiplying Scope 3 water.",
+        "isCorrect": false,
+        "explanation": "The main drawback isn't hardware wear but shift of water consumption into power generation."
+      },
+      {
+        "text": "Reduces direct water (Scope 1) to zero but increases electricity use, raising indirect water via power generation (Scope 2).",
+        "isCorrect": true,
+        "explanation": "Without evaporative cooling, more electricity is used for fans. Power plants require massive water, so indirect consumption rises sharply."
+      },
+      {
+        "text": "Requires highly pure water in closed loops, straining local supply.",
+        "isCorrect": false,
+        "explanation": "Dry coolers primarily use ambient air and ideally consume no on-site water."
+      },
+      {
+        "text": "No negative consequences; Scope 1 savings always exceed Scope 2 increase.",
+        "isCorrect": false,
+        "explanation": "Studies show Scope 2 increase can exacerbate local water stress depending on the power grid."
+      }
+    ],
+    "source_title": "Making AI Less Thirsty: Uncovering and Addressing the Secret Water Footprint of AI Models",
+    "source_url": "https://arxiv.org/pdf/2304.03271"
+  },
+  {
+    "id": 79,
+    "difficulty": 4,
+    "question": "How does inference energy demand compare to training for commercial LLMs?",
+    "answers": [
+      {
+        "text": "Inference is 5% of lifecycle emissions; training is 95%.",
+        "isCorrect": false,
+        "explanation": "While training is intensive, it happens rarely. Continuous usage far exceeds this value."
+      },
+      {
+        "text": "Cumulative inference significantly exceeds training, becoming primary environmental factor.",
+        "isCorrect": true,
+        "explanation": "Answering billions of user requests continuously constitutes the largest environmental impact over a model's lifecycle."
+      },
+      {
+        "text": "Training and inference consume exactly the same.",
+        "isCorrect": false,
+        "explanation": "No equilibrium exists. For heavily used models, inference increasingly dominates."
+      },
+      {
+        "text": "Inference emissions decrease with continual learning.",
+        "isCorrect": false,
+        "explanation": "LLMs don't automatically learn during inference, so power consumption per prompt doesn't decrease over time."
+      }
+    ],
+    "source_title": "How Hungry is AI? Benchmarking Energy, Water, and Carbon Footprint of LLM Inference",
+    "source_url": "https://arxiv.org/pdf/2505.09598"
+  },
+  {
+    "id": 80,
+    "difficulty": 4,
+    "question": "Which architecture reduces energy consumption ~90% while maintaining/increasing parameters?",
+    "answers": [
+      {
+        "text": "Exclusive use of RNNs instead of Transformers.",
+        "isCorrect": false,
+        "explanation": "RNNs are difficult to parallelize and scale poorly vs. Transformers."
+      },
+      {
+        "text": "Large-scale sparsely activated models (Sparse Models/Mixture of Experts).",
+        "isCorrect": true,
+        "explanation": "Sparse Models have many parameters but only activate sub-networks for specific tasks, saving massive energy vs. dense networks."
+      },
+      {
+        "text": "Increasing precision to 64-bit floating-point.",
+        "isCorrect": false,
+        "explanation": "Higher precision would dramatically increase memory and computation. The trend is toward lower precision."
+      },
+      {
+        "text": "Converting dense layers to convolutional layers.",
+        "isCorrect": false,
+        "explanation": "CNNs are primarily for image recognition, not a main solution for language model energy reduction."
+      }
+    ],
+    "source_title": "Carbon Emissions and Large Neural Network Training",
+    "source_url": "https://arxiv.org/pdf/2104.10350"
+  },
+  {
+    "id": 81,
+    "difficulty": 4,
+    "question": "What's the primary energy driver in DNNs, contradicting the focus on FLOPs?",
+    "answers": [
+      {
+        "text": "CPU-hard drive communication latency.",
+        "isCorrect": false,
+        "explanation": "Training/inference occur in GPU/TPU VRAM; hard drive access plays almost no role in computational energy."
+      },
+      {
+        "text": "Memory access to high-speed storage, not pure computation.",
+        "isCorrect": true,
+        "explanation": "Moving massive data (weights) from memory to processor costs significantly more energy than mathematical operations."
+      },
+      {
+        "text": "Asynchronous cooling of Tensor Cores.",
+        "isCorrect": false,
+        "explanation": "Cooling is relevant for data center PUE, but at chip level, memory accesses draw the most power."
+      },
+      {
+        "text": "Energy correlates 100% linearly with FLOPs.",
+        "isCorrect": false,
+        "explanation": "Electrical energy to drive data paths is significantly higher than for addition or multiplication."
+      }
+    ],
+    "source_title": "Carbon Footprint of Machine Learning",
+    "source_url": "https://ees2.slac.stanford.edu/sites/default/files/2023-12/10%20-%20Patterson.pdf"
+  },
+  {
+    "id": 82,
+    "difficulty": 4,
+    "question": "How does geographic location affect water consumption per prompt in hot summer months?",
+    "answers": [
+      {
+        "text": "Cooler climates evaporate more water to balance temperature.",
+        "isCorrect": false,
+        "explanation": "Cool climates use 'free cooling' and consume extremely little water."
+      },
+      {
+        "text": "Globally identical; same cooling per computational step.",
+        "isCorrect": false,
+        "explanation": "Local climate dictates how hard evaporative cooling must work."
+      },
+      {
+        "text": "Hot dry regions (e.g., Arizona) use up to 9x more water per kWh than cooler climates.",
+        "isCorrect": true,
+        "explanation": "In hot deserts, outside air is too warm to cool servers. Cooling towers must evaporate massive amounts of water."
+      },
+      {
+        "text": "High solar energy locations need no cooling water.",
+        "isCorrect": false,
+        "explanation": "Electricity source doesn't change that server chips convert electricity to heat requiring dissipation."
+      }
+    ],
+    "source_title": "The Hidden Footprint of AI: Climate, Water, and Justice Costs",
+    "source_url": "https://www.bowdoin.edu/hastings-ai-initiative/resources/initiative-created-resources/environmental-brief.pdf"
+  }
 ]
