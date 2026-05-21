@@ -21,7 +21,8 @@ Because EasyAI is highly web-focused, accessing it is straightforward:
 * **Run Locally:** If you want to run the web app locally on Windows, follow the steps in the section below.
 * **Listen to the Podcast:** The podcast is currently in production. Once finished, it will be published and accessible on Spotify.
 
-## Run the project locally on Windows with Node.js
+## Run the project locally with Node.js
+The steps below are written for Windows PowerShell or Command Prompt.
 1. Install the latest **Node.js LTS** for Windows from [nodejs.org](https://nodejs.org/).
 2. Open **PowerShell** or **Command Prompt**.
 3. Go to the project folder:
