@@ -25,21 +25,21 @@ Because EasyAI is highly web-focused, accessing it is straightforward:
 1. Install the latest **Node.js LTS** for Windows from [nodejs.org](https://nodejs.org/).
 2. Open **PowerShell** or **Command Prompt**.
 3. Go to the project folder:
-   ```bash
+   ```powershell
    cd C:\path\to\consume-minigame
    ```
 4. Install the dependencies:
-   ```bash
+   ```powershell
    npm install
    ```
 5. Start the local development server:
-   ```bash
+   ```powershell
    npm run dev
    ```
 6. Open the local URL shown in the terminal, usually `http://localhost:5173`.
 
 To create a production build, run:
-```bash
+```powershell
 npm run build
 ```
 
