@@ -18,8 +18,30 @@ Our ecosystem consists of a web application, an educational podcast, and a share
 Because EasyAI is highly web-focused, accessing it is straightforward:
 
 * **Visit the Live App:** The easiest way to interact with the game and the prompt analyzer is by visiting our live website: *[In future here will be a link to the productive website]*
-* **Run Locally:** If you are a developer and want to run the web app or check the design files locally, please navigate to the specific repository (linked in the table above) and follow its individual setup instructions.
+* **Run Locally:** If you want to run the web app locally on Windows, follow the steps in the section below.
 * **Listen to the Podcast:** The podcast is currently in production. Once finished, it will be published and accessible on Spotify.
+
+## Run the project locally on Windows with Node.js
+1. Install the latest **Node.js LTS** for Windows from [nodejs.org](https://nodejs.org/).
+2. Open **PowerShell** or **Command Prompt**.
+3. Go to the project folder:
+   ```bash
+   cd C:\path\to\consume-minigame
+   ```
+4. Install the dependencies:
+   ```bash
+   npm install
+   ```
+5. Start the local development server:
+   ```bash
+   npm run dev
+   ```
+6. Open the local URL shown in the terminal, usually `http://localhost:5173`.
+
+To create a production build, run:
+```bash
+npm run build
+```
 
 ## Partners
 This Erasmus project is a collaborative effort across multiple European countries:
